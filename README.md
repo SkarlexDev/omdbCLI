@@ -1,6 +1,6 @@
 # omdbcli
 This program will read json response about movies from  [OMDb API](https://www.omdbapi.com/) </br>
-Locate [omdbcli.jar](https://github.com/SkarlexDev/omdbcli/tree/main/target) and run `java -jar omdbcli.jar -h` for more information </br>
+Run `java -jar omdbcli.jar -h` for more information </br>
 Available commands: </br>
 
 
