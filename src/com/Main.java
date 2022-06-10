@@ -42,7 +42,7 @@ public class Main {
 
 		options.addOption("y", "year", true, "Search by Year");
 		options.addOption("s", "search", true, "Search multiple movies with title, use quotes if title have spaces");
-		options.addOption("t", "search", true, "Search movie with title, use quotes if title have spaces");
+		options.addOption("t", "title", true, "Search movie with title, use quotes if title have spaces");
 		options.addOption("sort", true, "Sort by Title | Year");
 		options.addOption("h", "help", false, "Show help");
 
