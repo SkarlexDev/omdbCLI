@@ -1,26 +1,22 @@
 package com.junit;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.fail;
 
-import org.apache.http.HttpEntity;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClients;
+import java.io.IOException;
+
 import org.junit.jupiter.api.Test;
 
-import com.util.ConnectionCheck;
+import com.util.ConnectionHelper;
 
 class ConnectionCheckTest {
 
 	@Test
-	void check() {
-		ConnectionCheck junit = new ConnectionCheck();
-		String search = "&t=300";
-		CloseableHttpClient httpClient = HttpClients.createDefault();
-		HttpEntity entity = junit.check(httpClient, search);
-		if(entity==null) {
-			fail("Result is null");
-		}else {
-			return;
+	void check() throws IOException {
+		ConnectionHelper junit = new ConnectionHelper();
+		StringBuilder search = new StringBuilder("&t=300");
+		int entity = junit.checkStatus(search);
+		if(entity!=200) {
+			fail("Status is not 200");
 		}
 	}
 
